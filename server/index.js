@@ -14,14 +14,14 @@ app.use("/auth", authRouter);
 app.use("/student", studentRoute);
 app.use("/dean", deanRouter);
 
-//function to update booking completed after scheduled time
-// cron.schedule("0 * * * *", async () => {
-//   try {
-//     await bookingCompleteScheduler();
-//   } catch (error) {
-//     console.error("Error in scheduled task:", error);
-//   }
-// });
+// function to update booking completed after scheduled time
+cron.schedule("0 * * * *", async () => {
+  try {
+    await bookingCompleteScheduler();
+  } catch (error) {
+    console.error("Error in scheduled task:", error);
+  }
+});
 
 app.get("/", (req, res, next) => {
   res.status(200).send("Welcome buddy , Its our API landing page"); //Delete after creeating specific routes

@@ -21,7 +21,7 @@ const ChatbotComponent = () => {
           {botStatus && botStatus.active == null && <WelcomeMsg />}
           {botStatus && botStatus.active && (
             <>
-              <div className="flex justify-end items-end my-9 col-span-2">
+              <div className="flex justify-end items-end mt-9 col-span-2">
                 {console.log(userInfo, botStatus)}
                 <Chatbot
                   config={config}

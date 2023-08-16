@@ -22,7 +22,7 @@ const ActionProvider = ({
   };
   // console.log("createClientMessage---", createClientMessage);
   const handleGotItButton = () => {
-    const clientMessage = createClientMessage("Got It!");
+    const clientMessage = createClientMessage("Got It !");
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, clientMessage],

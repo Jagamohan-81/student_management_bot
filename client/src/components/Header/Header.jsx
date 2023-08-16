@@ -10,9 +10,24 @@ const Header = () => {
       <nav className="nav-links flex flex-col sm:flex-row justify-end mx-5">
         <div className="flex justify-center m-2"></div>
         <div className="flex justify-around items-center m-2">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
+          <a
+            href="/"
+            className=" mx-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full"
+          >
+            Home
+          </a>
+          <a
+            href="/about"
+            className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full"
+          >
+            About
+          </a>
+          <a
+            href="/contact"
+            className="mx-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full"
+          >
+            Contact
+          </a>
         </div>
       </nav>
     </header>

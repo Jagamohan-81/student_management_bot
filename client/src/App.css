@@ -18,3 +18,11 @@
 .image-div img {
   max-width: 700px;
 }
+
+.react-chatbot-kit-chat-header {
+  background-color: #2898ec !important;
+  color: #ffff !important;
+}
+.react-chatbot-kit-chat-btn-send {
+  background-color: #2898ec !important;
+}

@@ -134,15 +134,16 @@ module.exports = {
   getFreeSessions: async (id) => {
     return new Promise((resolve, reject) => {
       db.any(
-        "SELECT * FROM sessions_tbl WHERE day IN ('Thursday', 'Friday') AND start_time = '10:00' AND id NOT IN (SELECT session_id FROM bookings_tbl WHERE student_id = $1)",
+        "SELECT s.*, d.name as dean_name " +
+          "FROM sessions_tbl s " +
+          "JOIN deans_tbl d ON s.dean_id = d.id " +
+          "WHERE s.day IN ('Thursday', 'Friday') " +
+          "AND s.start_time = '10:00' " +
+          "AND s.id NOT IN (SELECT session_id FROM bookings_tbl WHERE student_id = $1)",
         [id]
       )
-        .then(function (user) {
-          if (user) {
-            resolve(user);
-          } else {
-            resolve(null);
-          }
+        .then(function (sessions) {
+          resolve(sessions);
         })
         .catch(function (err) {
           console.log(err);
