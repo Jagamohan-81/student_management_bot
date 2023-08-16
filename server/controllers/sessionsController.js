@@ -71,7 +71,8 @@ module.exports = {
       const dean_id = dean.user_id;
       if (dean_id) {
         await adminModal.pendingSession(dean_id).then((data) => {
-          if (data.id) {
+          console.log("data----", data);
+          if (data && data.length > 0) {
             return res.status(200).json({
               status: "OK",
               message: "List of pending sessions",

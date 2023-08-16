@@ -1,0 +1,43 @@
+/* Header.css */
+.header-container {
+  background-color: #2898ec;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  width: 500px;
+}
+.nav-links .user-name {
+  background-color: #010081;
+}
+.nav-links a {
+  min-width: 50px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.nav-links span {
+  min-width: 50px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: yellow;
+}
+
+@media (max-width: 639px) {
+  .nav-links {
+    width: 100%;
+  }
+}
